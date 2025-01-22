@@ -1,0 +1,45 @@
+
+.food-category{
+    padding-top: 3rem;
+    padding-bottom:4rem;
+    border-bottom: 1px solid black;
+    display: flex;
+    gap: 1rem;
+
+}
+
+.food-card{
+    
+    width: 12%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.img-container{
+    height:7rem;
+    width:7rem;
+    border-radius: 50%;
+    /* background-color: red; */
+    overflow: hidden;
+    cursor: pointer;
+}
+.img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.active{
+    border: 2px solid #f36a08;
+    cursor: pointer;
+}
+.unactive{
+    border:none;
+    
+}
+.food-card p{
+    margin-top: .5rem;
+    font-weight: 500;
+}

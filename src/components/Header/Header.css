@@ -1,0 +1,55 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1rem 0rem 1rem 0rem;
+}
+
+
+ul{
+    display: flex;
+    gap:1.2rem;
+    
+}
+ul a{
+    color: black;
+}
+.icons{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    position: relative;
+
+}
+.icons .icon{
+    font-size: 1.8rem;
+}
+
+.icons button{
+    padding:.5rem 1rem;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.697);
+    outline: none;
+    cursor: pointer;
+}
+
+.underline{
+    border-bottom: 2px solid black;
+    padding-bottom: 1px;
+    
+}
+
+.dot{
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #f36a08;
+position: absolute;
+left: 45%;
+top: -7%;
+}
+
+.icons button:hover{
+    background-color: #f36a08;
+    color: white;
+}

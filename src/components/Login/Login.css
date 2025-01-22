@@ -1,0 +1,54 @@
+.login-box{
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width:25vw;
+    height: auto;
+    background-color: white;
+    z-index: 15;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.login-form-text{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    align-items: center;
+    font-weight: 500;
+    color: black;
+    font-size: 1.2rem;
+    
+}
+.form-text h2{
+    font-weight: 600;
+    font-size:1.5rem;
+    
+}
+
+form input{
+    display: block;
+    width: 100%;
+    margin: 1rem 0rem;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    outline: none;
+    font-size:1.5rem;
+    border:1px solid black;
+    
+}
+
+form button{
+    width: 100%;
+    margin: .5rem 0rem;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    outline: none;
+    border:1px solid black;
+    font-size: 2rem;
+    background-color: #f36a08;
+    color: white;
+}
+

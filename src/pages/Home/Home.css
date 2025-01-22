@@ -1,0 +1,67 @@
+.container{
+    width:75%;
+    margin: auto;
+}
+
+.food-bg{
+    margin-top:2rem;
+    margin-bottom:2rem;
+    background-image: url(../../assets/food-bg.avif);
+    filter: brightness(90%);
+    height: 65vh;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.food-bg .text{
+    width: 70%;
+    color:#fff !important;
+    position: relative;
+    top: 20%;
+    padding: 1rem 4rem;
+    z-index: 9;
+
+}
+.text h1{
+    font-size: 3rem;
+}
+
+.text button{
+    margin-top: 2rem;
+    
+}
+
+.explore h1{
+font-size: 2rem;
+margin-bottom: 1rem;
+font-weight: 600;
+}
+
+.dishes{
+    width: 100%;
+    padding-top:1vw;
+}
+
+.dishes h1{
+    font-size: 2rem;
+    margin-top: 1rem ;
+    font-weight: 600;
+}
+.dishes-cart{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:2rem;
+    padding: 2rem 0rem;
+    height: fit-content;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+    .dishes-cart{
+        grid-template-columns: repeat(1,1fr);;
+    }
+  }
