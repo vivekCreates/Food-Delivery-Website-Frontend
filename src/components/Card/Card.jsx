@@ -3,12 +3,14 @@ import "./Card.css";
 import { assets } from "../../assets/assets";
 import { FaStar } from "react-icons/fa";
 import { useCart } from "../../contexts/CartContext";
+import { useNavigate } from "react-router-dom";
 
-const Card = ({ data, onClick }) => {
-  const { state, dispatch } = useCart();
+const Card = ({ data }) => {
+  const { dispatch } = useCart();
+  const navigate = useNavigate();
   const [showQuantityModal, setShowQuantityModal] = useState(false);
   return (
-    <div className="card">
+    <div className="card" onClick={() => navigate(`/food/${data._id}`)}>
       <div className="card-img">
         <img src={data.image} alt="" />
         {!showQuantityModal ? (
@@ -16,7 +18,8 @@ const Card = ({ data, onClick }) => {
             src={assets.add_icon_white}
             alt=""
             className="white-icon"
-            onClick={() => {
+            onClick={(e) => {
+              e.stopPropagation();
               setShowQuantityModal(true);
               dispatch({ type: "ADD_TO_CART", payload: data });
             }}
