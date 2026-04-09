@@ -1,80 +1,92 @@
-import React, { useContext } from "react";
-// import { Link } from "react-router-dom";
-import { Link } from "react-scroll";
+import React, { useState } from "react";
+import { Link as RouterLink } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import "./Header.css";
-import { useState } from "react";
 import { assets } from "../../assets/assets";
 import { useCart } from "../../contexts/CartContext";
 
 const Header = () => {
   const [menu, setMenu] = useState("Home");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { state } = useCart();
-  const handleAnimation = (e) => {
-    setMenu(e.target.innerText);
-    console.log(menu);
+
+  const handleMenuSelection = (menuName) => {
+    setMenu(menuName);
+    setIsMobileMenuOpen(false);
   };
+
   return (
-    <nav>
+    <nav className="navbar">
       <div className="logo">
-        <Link to={"/"}>
-          <img src={assets.logo} alt="" />
-        </Link>
+        <RouterLink to="/">
+          <img src={assets.logo} alt="Tomato logo" />
+        </RouterLink>
       </div>
-      <ul>
-        <li
-          className={menu === "Home" ? "underline" : ""}
-          onClick={handleAnimation}
-        >
-          <Link to="/">Home</Link>
+
+      {/* Mobile-first navbar toggle for small screens */}
+      <button
+        className="menu-toggle"
+        type="button"
+        aria-label="Toggle navigation menu"
+        aria-expanded={isMobileMenuOpen}
+        onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+
+      {/* Collapsible menu keeps existing navigation behavior intact */}
+      <ul className={isMobileMenuOpen ? "nav-links open" : "nav-links"}>
+        <li className={menu === "Home" ? "underline" : ""}>
+          <RouterLink to="/" onClick={() => handleMenuSelection("Home")}>
+            Home
+          </RouterLink>
         </li>
-        <li
-          className={menu === "Menu" ? "underline" : ""}
-          onClick={handleAnimation}
-        >
-          <Link
+        <li className={menu === "Menu" ? "underline" : ""}>
+          <ScrollLink
             to="menu"
             smooth={true}
             duration={500}
-            style={{ margin: "10px", cursor: "pointer" }}
+            onClick={() => handleMenuSelection("Menu")}
           >
             Menu
-          </Link>
+          </ScrollLink>
         </li>
-        <li
-          className={menu === "Mobile app" ? "underline" : ""}
-          onClick={handleAnimation}
-        >
-          <Link to="mobile-app"
+        <li className={menu === "Mobile app" ? "underline" : ""}>
+          <ScrollLink
+            to="mobile-app"
             smooth={true}
             duration={500}
-            style={{ margin: "10px", cursor: "pointer" }}>
+            onClick={() => handleMenuSelection("Mobile app")}
+          >
             Mobile app
-            </Link>
+          </ScrollLink>
         </li>
-        <li
-          className={menu === "Contact us" ? "underline" : ""}
-          onClick={handleAnimation}
-        >
-            <Link to="contact-us"
+        <li className={menu === "Contact us" ? "underline" : ""}>
+          <ScrollLink
+            to="contact-us"
             smooth={true}
             duration={500}
-            style={{ margin: "10px", cursor: "pointer" }}>
+            onClick={() => handleMenuSelection("Contact us")}
+          >
             Contact us
-            </Link>
+          </ScrollLink>
         </li>
       </ul>
       <div className="icons">
-        <Link>
+        <RouterLink to="/">
           <img src={assets.search_icon} alt="cart" />
-        </Link>
-        <Link to="/cart">
-          {" "}
-          <img src={assets.basket_icon} alt="" />
-        </Link>
+        </RouterLink>
+        <RouterLink to="/cart">
+          <img src={assets.basket_icon} alt="Cart" />
+        </RouterLink>
 
         {state.cart.length > 0 && <div className="dot"></div>}
 
-        <Link to={"/login"}>Sign in</Link>
+        <RouterLink to="/login" className="signin-link">
+          Sign in
+        </RouterLink>
       </div>
     </nav>
   );

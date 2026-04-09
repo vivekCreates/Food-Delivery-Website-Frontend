@@ -1,24 +1,18 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import Header from "../../components/Header/Header";
 import "./Home.css";
 import Footer from "../../components/Footer/Footer";
 import { food_list, menu_list } from "../../assets/assets";
 import Card from "../../components/Card/Card";
 import ExploreMenu from "../../components/ExploreMenu/ExploreMenu";
-
-import Login from "../../components/Login/Login";
 import Playstore from "../../components/PlayStore/Playstore";
-import Register from "../../components/Register/Register";
 
 const Home = () => {
-  const [menu, setMenu] = useState(menu_list);
+  const [menu] = useState(menu_list);
   const [menuName, setMenuName] = useState("");
-   
-   
 
   const getIndex = (index) => {
     setMenuName(menu[index].menu_name);
-    console.log("menu List", menuName);
   };
 
   const filtered = food_list.filter((card) => {

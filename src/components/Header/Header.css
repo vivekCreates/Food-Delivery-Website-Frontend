@@ -1,55 +1,113 @@
-nav{
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  gap: 1rem;
+  position: relative;
+}
+
+.logo img {
+  width: clamp(7rem, 10vw, 9rem);
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 1.5rem;
+  height: 2px;
+  background-color: #1f1f1f;
+  margin: 0.25rem 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: clamp(0.75rem, 2vw, 1.4rem);
+  font-size: clamp(0.9rem, 1.3vw, 1rem);
+}
+
+.nav-links a {
+  cursor: pointer;
+}
+
+.icons {
+  display: flex;
+  gap: clamp(0.7rem, 2vw, 1.2rem);
+  align-items: center;
+  position: relative;
+}
+
+.icons img {
+  width: clamp(1rem, 2vw, 1.25rem);
+  height: clamp(1rem, 2vw, 1.25rem);
+}
+
+.signin-link {
+  padding: 0.4rem 0.9rem;
+  border-radius: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.697);
+  font-size: clamp(0.8rem, 1.2vw, 0.95rem);
+}
+
+.underline {
+  border-bottom: 2px solid black;
+  padding-bottom: 2px;
+}
+
+.dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background-color: #f36a08;
+  position: absolute;
+  left: 38%;
+  top: -12%;
+}
+
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block;
+    order: 3;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.open {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding:1rem 0rem 1rem 0rem;
+    flex-direction: column;
+    gap: 0.9rem;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 1rem;
+    border: 1px solid #e8e8e8;
+    border-radius: 0.8rem;
+    z-index: 20;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
 }
 
+@media (max-width: 640px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
 
-ul{
-    display: flex;
-    gap:1.2rem;
-    
-}
-ul a{
-    color: black;
-}
-.icons{
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-    position: relative;
+  .icons {
+    margin-left: auto;
+  }
 
-}
-.icons .icon{
-    font-size: 1.8rem;
-}
-
-.icons button{
-    padding:.5rem 1rem;
-    border-radius: 50px;
-    border: 1px solid rgba(0, 0, 0, 0.697);
-    outline: none;
-    cursor: pointer;
-}
-
-.underline{
-    border-bottom: 2px solid black;
-    padding-bottom: 1px;
-    
-}
-
-.dot{
-width: 10px;
-height: 10px;
-border-radius: 50%;
-background-color: #f36a08;
-position: absolute;
-left: 45%;
-top: -7%;
-}
-
-.icons button:hover{
-    background-color: #f36a08;
-    color: white;
+  .signin-link {
+    padding: 0.35rem 0.75rem;
+  }
 }

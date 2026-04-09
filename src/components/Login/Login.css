@@ -1,54 +1,69 @@
-.login-box{
-    position:fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width:25vw;
-    height: auto;
-    background-color: white;
-    z-index: 15;
-    padding: 1rem;
-    border: 1px solid black;
-    border-radius: 10px;
+.login-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(92vw, 27rem);
+  background-color: white;
+  z-index: 15;
+  padding: 1rem;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
-.login-form-text{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    align-items: center;
-    font-weight: 500;
-    color: black;
-    font-size: 1.2rem;
-    
-}
-.form-text h2{
-    font-weight: 600;
-    font-size:1.5rem;
-    
+.login-form-text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  align-items: center;
+  font-weight: 500;
+  color: black;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
 }
 
-form input{
-    display: block;
-    width: 100%;
-    margin: 1rem 0rem;
-    padding: .5rem 1rem;
-    border-radius: 5px;
-    outline: none;
-    font-size:1.5rem;
-    border:1px solid black;
-    
+.login-box form input {
+  display: block;
+  width: 100%;
+  margin: 0.8rem 0;
+  padding: 0.55rem 0.8rem;
+  border-radius: 5px;
+  outline: none;
+  font-size: clamp(0.9rem, 1.3vw, 1rem);
+  border: 1px solid black;
 }
 
-form button{
-    width: 100%;
-    margin: .5rem 0rem;
-    padding: .5rem 1rem;
-    border-radius: 5px;
-    outline: none;
-    border:1px solid black;
-    font-size: 2rem;
-    background-color: #f36a08;
-    color: white;
+.login-box form button {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.6rem 0.9rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid black;
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  background-color: #f36a08;
+  color: white;
+}
+
+.login-box .other-info {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.login-box input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.2rem;
+}
+
+.login-box #last {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+}
+
+.login-box .login a {
+  color: #f36a08;
 }
 

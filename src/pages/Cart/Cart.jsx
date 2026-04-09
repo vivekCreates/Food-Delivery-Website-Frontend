@@ -1,13 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import Header from "../../components/Header/Header";
 import "./Cart.css";
-import { assets, food_list } from "../../assets/assets";
 import { useCart } from "../../contexts/CartContext";
 import { CirclePlus, CircleMinus } from "lucide-react";
 import AmountToPayCard from "../../components/Amount/AmountToPayCard";
 const Cart = () => {
   const { state, dispatch } = useCart();
-  console.log("cartItems", state.cart);
   return (
     <div className="cart-container">
       <Header />

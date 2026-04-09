@@ -39,7 +39,7 @@ const Card = ({ data, onClick }) => {
           </div>
         </div>
         <p>{data.description}</p>
-        <h3 className="price">${data.price}</h3>
+        <h3 className="price">{data.price}</h3>
       </div>
     </div>
   );

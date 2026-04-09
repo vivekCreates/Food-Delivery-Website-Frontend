@@ -1,51 +1,51 @@
 .amount-card {
-    width: 40rem;
-    height: auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
-    margin-top: 5rem;
-  }
-  
- .amount-card .header {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: center;
-  }
-  
-  .amount-card .items-container {
-    margin-bottom: 15px;
-  }
-  
- .amount-card .item {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-    font-size: 16px;
-  }
-  
-  .amount-card .total {
-    display: flex;
-    justify-content: space-between;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 15px;
-  }
-  
- .amount-card .button {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #f36a08;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+  width: min(100%, 40rem);
+  height: auto;
+  padding: clamp(0.9rem, 3vw, 1.25rem);
+  border: 1px solid #ddd;
+  border-radius: 0.6rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+}
+
+.amount-card .header {
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+.amount-card .items-container {
+  margin-bottom: 0.8rem;
+}
+
+.amount-card .item {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+}
+
+.amount-card .total {
+  display: flex;
+  justify-content: space-between;
+  font-size: clamp(1rem, 1.7vw, 1.1rem);
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.amount-card .button {
+  width: 100%;
+  padding: 0.65rem;
+  font-size: clamp(0.95rem, 1.4vw, 1rem);
+  font-weight: bold;
+  color: #fff;
+  background-color: #f36a08;
+  border: none;
+  border-radius: 0.35rem;
+  cursor: pointer;
+}
   
