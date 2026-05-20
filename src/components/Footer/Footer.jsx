@@ -18,6 +18,7 @@ const Footer = () => {
           <Link>About us</Link>
           <Link>Delivery</Link>
           <Link>Privacy Policy</Link>
+          <Link>Terms of Service</Link>
         </div>
       </div>
       <div className="right flex-box">
