@@ -63,7 +63,7 @@ const Header = () => {
             Mobile app
           </ScrollLink>
         </li>
-        <li className={menu === "Contact us" ? "underline" : ""}>
+        {/* <li className={menu === "Contact us" ? "underline" : ""}>
           <ScrollLink
             to="contact-us"
             smooth={true}
@@ -72,7 +72,7 @@ const Header = () => {
           >
             Contact us
           </ScrollLink>
-        </li>
+        </li> */}
       </ul>
       <div className="icons">
         <RouterLink to="/">
