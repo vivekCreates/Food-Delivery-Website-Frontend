@@ -60,7 +60,7 @@ const Header = () => {
             duration={500}
             onClick={() => handleMenuSelection("Mobile app")}
           >
-            Mobile 
+            Mobile app
           </ScrollLink>
         </li>
         <li className={menu === "Contact us" ? "underline" : ""}>
